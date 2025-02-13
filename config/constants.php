@@ -7,6 +7,7 @@ return array(
                 "welcome" => "welcome",
                 "register" => "Register",
                 "login" => "Login",
+                "logout" => "logout",
                 "signUp" => "signUp",
                 "log_in" => "Log In",
                 "sign_out" => "Register for Free",
@@ -75,7 +76,8 @@ return array(
                 "support" => "support",
                 "start" => "start",
                 "conversation" => "conversation",
-                "new" => "new"
+                "new" => "new",
+                "dashboard" => "dashboard"
             ],
             "user" => [
                 "name" => "name",
@@ -189,6 +191,7 @@ return array(
                 "welcome" => "خوش آمدید",
                 "register" => "ثبت",
                 "login" => "ورود",
+                "logout" => "خروج",
                 "signUp" => "ثبت نام",
                 "log_in" => "ورود",
                 "sign_out" => "ثبت نام",
@@ -258,7 +261,8 @@ return array(
                 "support" => "پشتیبانی",
                 "start" => "شروع",
                 "conversation" => "مکالمه",
-                "new" => "جدید"
+                "new" => "جدید",
+                "dashboard" => "داشبورد"
             ],
             "user" => [
                 "name" => "نام",

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\user\UserLoginRequest;
 use App\Http\Requests\user\UserRegisterRequest;
+use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +24,7 @@ class AuthenticationController extends Controller
         $formData['password'] = bcrypt($request->password);
         $user = User::create($formData);
         return response()->json([
-            'user' => $user,
+            'user' => new UserResource($user),
             'message' => __('auth.register.success')
         ], 201);
     }
@@ -41,10 +42,8 @@ class AuthenticationController extends Controller
             /** @var \App\Models\User $user **/
             $user = Auth::user();
             $token = $user->createToken('token')->plainTextToken;
-            dd($token);
-
             return response()->json([
-                'user' => Auth::user(),
+                'user' => new UserResource($user),
                 'token' => $token,
                 'message' => __('auth.login.success')
             ], 200);
