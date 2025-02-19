@@ -13,6 +13,7 @@ return array(
                 "sign_out" => "Register for Free",
                 "account" => "account",
                 "yourAccount" => "your @:general.account",
+                "yourPassword" => "your @:general.password",
                 "free" => "Free",
                 "password" => "password",
                 "email" => "email",
@@ -77,7 +78,19 @@ return array(
                 "start" => "start",
                 "conversation" => "conversation",
                 "new" => "new",
-                "dashboard" => "dashboard"
+                "dashboard" => "dashboard",
+                "reset_password" => "reset password",
+                "forget_password" => "forget password",
+                "back" => "back",
+                "to" => "to",
+                "forgot" => "forgot",
+                "verify" => "verify",
+                "repeat" => "repeat",
+                "forget" => "forget",
+                "send" => "send",
+                "incidents" => "incindents",
+                "maintenance" => "maintenance",
+                "more" => "more"
             ],
             "user" => [
                 "name" => "name",
@@ -98,15 +111,30 @@ return array(
                         "description" => "login page of UptimeRobot",
                         "keywords" => "login, UptimeRobot"
                     ],
+                    "reset_password" => [
+                        "description" => "reset password page of UptimeRobot",
+                        "keywords" => "reset password, UptimeRobot"
+                    ],
+                    "forget_password" => [
+                        "description" => "forget password page of UptimeRobot",
+                        "keywords" => "forget password, UptimeRobot"
+                    ],
                     "index" => [
                         "title" => "Free Website",
                         "description" => "Start monitoring in 30 seconds. get notified by email, SMS and more",
                         "keywords" => "uptime, uptime monitor, uptime robot"
-                    ]
+                    ],
+                    "integrations" => [
+                        "title" => "Integration & notifications",
+                        "description" => "Downtime happens. Get notified! We support email, SMS, Telegram. Start monitoring now!",
+                        "keywords" => "uptime, uptime monitor, uptime robot"
+                    ],
                 ],
                 "etc" => [
                     "inOnePlace" => "@:general.in @:general.one @:general.place",
-                    "helpYou" => "How can we help you?"
+                    "helpYou" => "How can we help you?",
+                    "resetPassword" => "We will send password reset link to your e-mail.",
+                    "invalidRepeatPassword" => "repeat password dont match"
                 ]
             ],
             "signup" => [
@@ -183,7 +211,12 @@ return array(
                     "required" => "password is required",
                     "min" => "password must be at least { number } characters",
                     "max" => "password must be a maximum { number } characters"
-                ]
+                ],
+                "password_confirmation" => [
+                    "required" => "repeat password is required",
+                    "min" => "repeat password must be at least { number } characters",
+                    "max" => "repeat password must be a maximum { number } characters"
+                ],
             ]
         ],
         'fa' => [
@@ -199,6 +232,7 @@ return array(
                 "yourAccount" => "حسابتان",
                 "free" => "رایگان",
                 "yourFreeAccount" => "حساب رایگان خود",
+                "yourPassword" => "رمز خود",
                 "password" => "رمز",
                 "email" => "ایمیل",
                 "gmail" => "gmail",
@@ -262,7 +296,19 @@ return array(
                 "start" => "شروع",
                 "conversation" => "مکالمه",
                 "new" => "جدید",
-                "dashboard" => "داشبورد"
+                "dashboard" => "داشبورد",
+                "reset_password" => "بازیابی رمزعبور",
+                "forget_password" => "فراموش کردن رمزعبور",
+                "back" => "بازگشت",
+                "to" => "به",
+                "forgot" => "فراموش کرده اید",
+                "verify" => "تایید",
+                "repeat" => "تکرار",
+                "forget" => "فراموش کردن",
+                "send" => "ارسال",
+                "incidents" => "حوادث",
+                "maintenance" => "تعمیر",
+                "more" => "بیشتر"
             ],
             "user" => [
                 "name" => "نام",
@@ -283,15 +329,30 @@ return array(
                         "description" => "صفحه ورود ربات زمان کار",
                         "keywords" => "ورود, ربات زمان کار"
                     ],
+                    "reset_password" => [
+                        "description" => "صفحه بازیابی رمزعبور ربات زمان کار",
+                        "keywords" => "بازیابی رمزعبور, ربات زمان کار"
+                    ],
+                    "forget_password" => [
+                        "description" => "صفحه فراموش کردن رمزعبور ربات زمان کار",
+                        "keywords" => "فراموش کردن رمزعبور, ربات زمان کار"
+                    ],
                     "index" => [
                         "title" => "وبسایت رایگان",
                         "description" => "شروع نظارت در کمترین زمان. دریافت اعلان های مشکلات سایت خود از طریق پیام و ایمیل",
                         "keywords" => "زمان کار, نظارت زمان کار, ربات زمان کار"
-                    ]
+                    ],
+                    "integrations" => [
+                        "title" => "ادغام ها و اعلانات",
+                        "description" => "خرابی اتفاق می افتد. مطلع شوید! ما از پیامک، تلگرام، ایمیل پشتیبانی می کنیم. اکنون نظارت را شروع کنید!",
+                        "keywords" => "زمان کار, نظارت زمان کار, ربات زمان کار"
+                    ],
                 ],
                 "etc" => [
                     "inOnePlace" => "@:general.in @:general.one @:general.place",
-                    "helpYou" => "چگونه می توانیم کمکتان کنیم؟"
+                    "helpYou" => "چگونه می توانیم کمکتان کنیم؟",
+                    "resetPassword" => "لینک بازیابی رمزعبور را برای شما ارسال خواهیم کرد",
+                    "invalidRepeatPassword" => "تکرار رمزعبور مطابقت ندارد"
                 ]
             ],
             "signup" => [
@@ -369,7 +430,12 @@ return array(
                     "required" => "رمزعبور الزامی است",
                     "min" => "رمزعبور باید حداقل {number} کاراکتر باشد",
                     "max" => "رمزعبور باید حداکثر {number} کاراکتر باشد"
-                ]
+                ],
+                "password_confirmation" => [
+                    "required" => "@:general.repeat رمزعبور الزامی است",
+                    "min" => "@:general.repeat رمزعبور باید حداقل {number} کاراکتر باشد",
+                    "max" => "@:general.repeat رمزعبور باید حداکثر {number} کاراکتر باشد"
+                ],
             ]
         ]
     ]

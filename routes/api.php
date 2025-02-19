@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 
-Route::apiResource('/user', UserController::class);
 
 
 Route::group(
@@ -42,5 +41,8 @@ Route::group(array('middleware' => [HandleLocale::class]), function () {
     });
     Route::post('/register', [AuthenticationController::class, 'register'])->name('register');
     Route::post('/login', [AuthenticationController::class, 'login'])->name('login');
+    Route::post('/forget-password', [AuthenticationController::class, 'forget_password'])->name('forget-password');
+    Route::post('/reset-password', [AuthenticationController::class, 'reset_password'])->name('reset-password');
+    Route::apiResource('/user', UserController::class);
 });
 Route::get('/locales/{id}', [LocaleController::class, 'index'])->name('locales');
