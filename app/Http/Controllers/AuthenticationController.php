@@ -98,4 +98,11 @@ class AuthenticationController extends Controller
             ? response()->json(['message' => __($status)])
             : response()->json(['message' => __($status)], 400);
     }
+    public function log_out()
+    {
+        auth()->user()->tokens()->delete();
+        return [
+            'message' => __("auth.logout.success")
+        ];
+    }
 }

@@ -43,6 +43,11 @@ Route::group(array('middleware' => [HandleLocale::class]), function () {
     Route::post('/login', [AuthenticationController::class, 'login'])->name('login');
     Route::post('/forget-password', [AuthenticationController::class, 'forget_password'])->name('forget-password');
     Route::post('/reset-password', [AuthenticationController::class, 'reset_password'])->name('reset-password');
-    Route::apiResource('/user', UserController::class);
+
+    //Authorization required
+    Route::group(array('middleware' => ['auth:sanctum']), function () {
+        Route::post('/logout', [AuthenticationController::class, 'log_out'])->name('log_out');
+    });
+    // Route::apiResource('/user', UserController::class);
 });
 Route::get('/locales/{id}', [LocaleController::class, 'index'])->name('locales');

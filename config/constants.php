@@ -12,6 +12,7 @@ return array(
                 "log_in" => "Log In",
                 "sign_out" => "Register for Free",
                 "account" => "account",
+                "your" => "your",
                 "yourAccount" => "your @:general.account",
                 "yourPassword" => "your @:general.password",
                 "free" => "Free",
@@ -52,7 +53,8 @@ return array(
                 "one" => "one",
                 "place" => "place",
                 "monitored" => "monitored",
-                "monitors" => "monitores",
+                "monitor" => "monitor",
+                "monitors" => "monitors",
                 "teams" => "teams",
                 "why" => "Why",
                 "users" => "users",
@@ -90,7 +92,13 @@ return array(
                 "send" => "send",
                 "incidents" => "incindents",
                 "maintenance" => "maintenance",
-                "more" => "more"
+                "more" => "more",
+                "single" => "single",
+                "wizard" => "wizard",
+                "first" => "first",
+                "add" => "add",
+                "details" => "details",
+                "info" => "info"
             ],
             "user" => [
                 "name" => "name",
@@ -129,6 +137,10 @@ return array(
                         "description" => "Downtime happens. Get notified! We support email, SMS, Telegram. Start monitoring now!",
                         "keywords" => "uptime, uptime monitor, uptime robot"
                     ],
+                    "monitors" => [
+                        "title" => "@:general.monitors",
+                        "description" => "مکانی برای مدیریت تمام مانیتورهای مهم شما. 50 مانیتور را به صورت رایگان دریافت کنید!",
+                    ]
                 ],
                 "etc" => [
                     "inOnePlace" => "@:general.in @:general.one @:general.place",
@@ -170,6 +182,12 @@ return array(
                     "subTitle" => "Showcase your service uptime with a status page. Highlight your services reliability and build trust with your website visitors and (potential) customers.",
                     "check" => "Check the LIVE Status Page Example"
                 ]
+            ],
+
+            "monitors" => [
+                "title" => "Monitor your website in a click",
+                "description" => "Keep an eye on your website, API, email service, or any port or device on the network. Ping our servers to track cron jobs and stay on top of critical incidents.",
+                "description-second" => "Get started now, all set up in under 30 seconds!"
             ],
             "pricing" => [
                 "title" => ""
@@ -229,6 +247,7 @@ return array(
                 "log_in" => "ورود",
                 "sign_out" => "ثبت نام",
                 "account" => "حساب",
+                "your" => " خودتان را",
                 "yourAccount" => "حسابتان",
                 "free" => "رایگان",
                 "yourFreeAccount" => "حساب رایگان خود",
@@ -270,7 +289,8 @@ return array(
                 "one" => "یک",
                 "place" => "مکان",
                 "monitored" => "نظارت می شود",
-                "monitors" => "بازدید کننده ها",
+                "monitor" => "نظارت",
+                "monitors" => "نظارت ها",
                 "teams" => "گروه ها",
                 "why" => "چرا",
                 "users" => "کاربران",
@@ -308,7 +328,14 @@ return array(
                 "send" => "ارسال",
                 "incidents" => "حوادث",
                 "maintenance" => "تعمیر",
-                "more" => "بیشتر"
+                "more" => "بیشتر",
+                "single" => "واحد",
+                "wizard" => "جادوگر",
+                "first" => "اولین",
+                "add" => "اضافه کردن",
+                "details" => "جزئیات",
+                "info" => "اطلاعات"
+
             ],
             "user" => [
                 "name" => "نام",
@@ -346,6 +373,10 @@ return array(
                         "title" => "ادغام ها و اعلانات",
                         "description" => "خرابی اتفاق می افتد. مطلع شوید! ما از پیامک، تلگرام، ایمیل پشتیبانی می کنیم. اکنون نظارت را شروع کنید!",
                         "keywords" => "زمان کار, نظارت زمان کار, ربات زمان کار"
+                    ],
+                    "monitors" => [
+                        "title" => "Monitors",
+                        "description" => "A place to manage all your important monitors. Get 50 monitors for FREE!",
                     ],
                 ],
                 "etc" => [
@@ -388,6 +419,11 @@ return array(
                     "subTitle" => "زمان کارکرد سرویس خود را با صفحه وضعیت نشان دهید. قابلیت اطمینان خدمات خود را برجسته کنید و با بازدیدکنندگان وب سایت و مشتریان (بالقوه) خود اعتماد ایجاد کنید.",
                     "check" => "مثال صفحه وضعیت زنده را بررسی کنید"
                 ]
+            ],
+            "monitors" => [
+                "title" => "با یک کلیک سایت تان را نظارت کنید",
+                "description" => "مراقب وب سایت، API، سرویس ایمیل یا هر پورت یا دستگاهی در شبکه باشید. سرورهای ما را پینگ کنید تا کارهای cron را ردیابی کنید و از حوادث مهم مطلع شوید.",
+                "description-second" => "اکنون شروع کنید، همه چیز در کمتر از 30 ثانیه تنظیم می شود"
             ],
             "pricing" => [
                 "title" => ""
