@@ -31,7 +31,7 @@ class AuthenticationController extends Controller
         $user = User::create($formData);
         return response()->json([
             'user' => new UserResource($user),
-            'message' => __('auth.register.success')
+            'message' => 'auth.register.success'
         ], 201);
     }
 
@@ -50,12 +50,12 @@ class AuthenticationController extends Controller
             return response()->json([
                 'user' => new UserResource($user),
                 'token' => $token,
-                'message' => __('auth.login.success')
+                'message' => "auth.login.success"
             ], 200);
         }
 
         return response()->json([
-            'error' => __('auth.login.failed')
+            'error' => "auth.login.failed"
         ], 401);
     }
 
@@ -72,11 +72,11 @@ class AuthenticationController extends Controller
             );
 
             return $status === Password::RESET_LINK_SENT
-                ? response()->json(['message' => __($status)])
-                : response()->json(['message' => __($status)], 400);
+                ? response()->json(['message' => $status])
+                : response()->json(['message' => $status], 400);
         }
         $status = PasswordBroker::INVALID_USER;
-        return response()->json(['message' => __($status)], 404);
+        return response()->json(['message' => $status], 404);
     }
 
     public function reset_password(AuthResetPasswordRequest $request)
@@ -95,14 +95,14 @@ class AuthenticationController extends Controller
         );
 
         return $status === Password::PASSWORD_RESET
-            ? response()->json(['message' => __($status)])
-            : response()->json(['message' => __($status)], 400);
+            ? response()->json(['message' => $status])
+            : response()->json(['message' => $status], 400);
     }
     public function log_out()
     {
         auth()->user()->tokens()->delete();
         return [
-            'message' => __("auth.logout.success")
+            'message' => "auth.logout.success"
         ];
     }
 }
